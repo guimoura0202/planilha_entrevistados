@@ -1,11 +1,6 @@
 import java.io.*;
 
 public class Trabalho {
-
-    
-    /** 
-     * @param args
-     */
     public static void main(String[] args) {
 
         //CSV = Comma-Separated Values 
@@ -16,9 +11,9 @@ public class Trabalho {
         // Creating a variable called reader of type BufferedReader and initializing it with null.
         BufferedReader reader = null;
         // Creating a variable called line of type String and initializing it with an empty string.
-        String line = "";
+        String line = " ";
         // Creating an object of the class Evetor.
-        String conc = "";
+        String conc = " ";
         Evetor v = new Evetor ();
        // Reading the file and creating an object of the class Entrevistado for each line of the file.
         try {
