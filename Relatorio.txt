@@ -1,0 +1,23 @@
+Informações pedidas pelo trabalho que foram encontradas pelo grupo: 
+1) São um total de 300 entrevistados.
+2) A porcentagem de pessoas do gênero masculino é 33.333332% , a porcentagem de pessoas do gênero feminino é 35.333332% e a porcentagem de outros: 31.333334%.
+3) Tiveram 63 entrevistados de até 15 anos, 78 de 16 a 29 anos, 74 de 30 a 59 anos e 85 acima de 60 anos.
+4) Porcentagens de entrevistados com: 
+Fundamental incompleto: 15.333333%;
+Fundamental completo: 18.0%; 
+Médio incompleto é de 18.666666%; 
+Médio completo: 14.333333%; 
+Superior incompleto: 14.0%; 
+Superior completo: 19.666666%.
+5) Tiveram 59.0 com no mínimo superior completo
+6) As duas faixa etárias que mais utilizam smartphone são asde 16 a 29 anos e de 30 a 29 anos
+7) A tecnologia menos utilizada pela faixa etária até 15 anos é o computador pessoal
+8) A seguir temos o número de entrevistados que apontou cada um desses problemas envolvendo tecnologias digitais como sendo prioridade: 
+Alimentação: 99
+Educação:85
+Cultura: 116
+Saúde: 0
+Transporte: 0
+Emprego: 0
+Lazer: 0
+Segurança: 0.
