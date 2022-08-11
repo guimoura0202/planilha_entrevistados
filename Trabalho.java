@@ -8,27 +8,38 @@ public class Trabalho {
         BufferedReader reader = null;
         // Criacao de uma variavel chamada line do tipo String e inicializando como uma String vazia.
         String line = " ";
-        // Criacao de um objeto da classe Evetor.
         String conc = " ";
+        // Criando um objeto da classe Evetor.
         Evetor v = new Evetor ();
        // Leitura do arquivo e criação de um objeto da classe Entrevistado para cada linha do arquivo.
         try {
+            // Creating a new BufferedReader object and assigning it to the variable reader.
             reader = new BufferedReader(new FileReader(file));
             while((line = reader.readLine()) != null) {
+                // Dividindo a linha em um array de Strings, que seriam as colunas da planilha.
                 String[] row = line.split(";");
+                // Atribuindo o array de String à variável entrevistado do tipo Entrevistado.
                 Entrevistado entrevistado = new Entrevistado(row[0].charAt(0), row[1], row[2], row[3], row[4], row[5]);
+                // Adiciona o objeto `entrevistado` ao vetor de entrevistados.
                 v.adiciona(entrevistado);
-                System.out.println();
             }
         }
+        // Captura uma excessão
         catch(Exception e) {
             e.printStackTrace();
         }
+        // Um bloco de código que será executado após a conclusão do bloco try/catch e antes
+        // do código seguinte ao bloco try/catch. O bloco finally será executado se uma
+        // exceção for lançada ou não. Se uma exceção for lançada, o bloco finally será 
+        // executado mesmo se nenhuma instrução catch corresponder à exceção.
         finally {
             try {
+                // Fecha o arquivo.
                 reader.close();
+            // Captura uma excessão
             } catch (IOException e) {
             
+                // Imprime o rastreamento de pilha da exceção.
                 e.printStackTrace();
             }
         }
@@ -55,7 +66,17 @@ public class Trabalho {
             // chamado Relatorio.txt.
             Arquivo.gravar(conc,"Relatorio.txt");
         } catch (Exception e) {
+            // It prints the stack trace of the exception.
             e.printStackTrace();
+        }
+        finally {
+            try {
+                // It closes the file.
+                reader.close();
+            } catch (IOException e) {
+            
+                e.printStackTrace();
+            }
         }
     }
 }

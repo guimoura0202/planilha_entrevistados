@@ -23,6 +23,7 @@ public class Evetor {
     public float returnGenero(char genero){
         float quant = 0;
         char aux = ' ';
+        // Anda por todo array, verificando os valores da variável aux, do tipo char, acrescentando a variável quant, do tipo int.
         for (int i = 0; i < proximo; i++){
             aux = vetor[i].getId();
             if (aux==genero){
@@ -41,9 +42,11 @@ public class Evetor {
         String str = " ";
         float m = 0, f = 0, o = 0;
         float percM, percF, percO;
+        //Utiliza metodo 3 para retornar o numero de pessoas de cada genero
         m = returnGenero('m');
         f = returnGenero ('f');
         o = returnGenero('o');
+        //Utiliza metodo 4 para retornar as porcentagens de cada genero
         percM = returnPercGen(m);
         percF = returnPercGen(f);
         percO = returnPercGen(o);
@@ -54,6 +57,7 @@ public class Evetor {
     public int returnFaixaEtaria(String FaixaEtaria){
         String aux = " ";
         int contador = 0;
+        // Anda por todo array, verificando os valores da variável aux, do tipo String, acrescentando a variável contador, do tipo int.
         for (int i = 0; i < proximo; i++){
             aux = vetor[i].getIdade();
             if (aux.equals(FaixaEtaria)){
@@ -66,6 +70,7 @@ public class Evetor {
     public String relatorioFaixaEtaria(){
         String str = " ";
         int crianca=0, jovem=0, adulto=0, idoso=0;
+        //utiliza o metodo 6 para retornar o numero de pessoas de cada faixa etaria
         crianca = returnFaixaEtaria(" Até 15 anos");
         jovem = returnFaixaEtaria(" De 16 a 29 anos");
         adulto = returnFaixaEtaria(" De 30 a 59 anos");
@@ -77,6 +82,7 @@ public class Evetor {
     public float returnEscolaridade(String escolaridade){
         String aux = " ";
         float contador = 0;
+        // Anda por todo array, verificando os valores da variável aux, do tipo String, acrescentando a variável contador, do tipo int.
         for(int i  = 0; i<proximo; i++){
             aux = vetor[i].getEnsino();
             if(aux.equals(escolaridade)){
@@ -95,12 +101,14 @@ public class Evetor {
         String str = " ";
         float fundInc = 0, fundCom = 0, medInc = 0, medCom = 0, supInc = 0, supCom = 0;
         float pFundInc, pFundCom, pMedInc, pMedCom, pSupInc, pSupCom;
+        //Utiliza o metodo 8 para retornar o numero de pessoas de cada nivel de escolaridade
         fundInc = returnEscolaridade(" Ensino fundamental incompleto");
         fundCom = returnEscolaridade(" Ensino fundamental completo");
         medInc = returnEscolaridade( " Ensino médio incompleto");
         medCom = returnEscolaridade(" Ensino médio completo");
         supInc =  returnEscolaridade(" Ensino superior incompleto");
         supCom =  returnEscolaridade( " Ensino superior completo");
+        // Utiliza o metodo 9 para retornar a porcentagem de pessoas de cada nivel de escolaridade.
         pFundInc = returnPercEsc(fundInc);
         pFundCom = returnPercEsc(fundCom);
         pMedInc = returnPercEsc(medInc);
@@ -122,6 +130,7 @@ public class Evetor {
     public int returnFaixaEtariaTecnologia(String tecnologia, String idade){
         String aux1 = " ", aux2 = " ";
         int cont = 0;
+        // Anda por todo array, verificando os valores das variáveis aux1 e aux2, do tipo String, acrescentando a variável cont, do tipo int.
         for(int i = 0; i < proximo; i++){
             aux1 = vetor[i].getAcesso();
             aux2 = vetor[i].getIdade();
@@ -132,15 +141,15 @@ public class Evetor {
         return cont;
     }
     //metodo 13: que compara qual das variaveis é maior, retornando a faixa etária do maior ou de ambos, caso estes sejam iguais
-    public String comparaMaior(int variavel1, String idade1, int variavel2, String idade2){
+    public String comparaMaior(int entrevistados1, String idade1, int entrevistados2, String idade2){
         String aux = " ";
-        if (variavel1>variavel2){
+        if (entrevistados1>entrevistados2){
             aux = idade1;
         }
-        if (variavel2>variavel1){
+        if (entrevistados2>entrevistados1){
             aux = idade2;
         }
-        if (variavel2==variavel1){
+        if (entrevistados2==entrevistados1){
             aux = idade1 + " e " + idade2;
         }
         return aux;
@@ -188,7 +197,7 @@ public class Evetor {
         //utiliza os metodos 13 e 14, de forma que e possivel comparar todas as variaveis de forma mais rapida e simples, de forma que e levado em consideracao se elas sao iguais ou nao para que no final seja mostrado apenas uma variavel caso ela nao seja igual a nenhuma outra ou pode ser mostrado duas ou mais variaveis caso elas sejam as maiores e iguais
         maior = comparaMaior(crianca, "até 15 anos", jovem, "de 16 a 29 anos");
         maiorv = maiorvalor(crianca, jovem);
-        maior = comparaMaior(maiorv,maior,adulto,"de 30 a 29 anos");
+        maior = comparaMaior(maiorv,maior,adulto,"de 30 a 59 anos");
         maiorv = maiorvalor(maiorv,adulto);
         maior = comparaMaior(maiorv,maior,idoso,"acima de 60 anos");
         maiorv = maiorvalor(maiorv,idoso);
@@ -196,7 +205,7 @@ public class Evetor {
         if (aux==false){
             str = "6) A faixa etária que mais utiliza smartphone é a "+maior;
         }else{
-            str = "6) As duas faixa etárias que mais utilizam smartphone são as"+maior;
+            str = "6) As duas faixa etárias que mais utilizam smartphone são as "+maior;
         }
         return str;
     }
