@@ -205,7 +205,7 @@ public class Evetor {
         if (aux==false){
             str = "6) A faixa etária que mais utiliza smartphone é a "+maior;
         }else{
-            str = "6) As duas faixa etárias que mais utilizam smartphone são as "+maior;
+            str = "6) As faixa etárias que mais utilizam smartphone são as "+maior;
         }
         return str;
     }
