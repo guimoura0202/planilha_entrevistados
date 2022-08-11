@@ -13,7 +13,7 @@ public class Trabalho {
         Evetor v = new Evetor ();
        // Leitura do arquivo e criação de um objeto da classe Entrevistado para cada linha do arquivo.
         try {
-            // Creating a new BufferedReader object and assigning it to the variable reader.
+            // Cria um novo objeto BufferedReader e atribue ele a variavel reader.
             reader = new BufferedReader(new FileReader(file));
             while((line = reader.readLine()) != null) {
                 // Dividindo a linha em um array de Strings, que seriam as colunas da planilha.
@@ -66,12 +66,12 @@ public class Trabalho {
             // chamado Relatorio.txt.
             Arquivo.gravar(conc,"Relatorio.txt");
         } catch (Exception e) {
-            // It prints the stack trace of the exception.
+            // Imprime o rastreamento da pilha de excessões.
             e.printStackTrace();
         }
         finally {
             try {
-                // It closes the file.
+                // Fecha o arquivo.
                 reader.close();
             } catch (IOException e) {
             
